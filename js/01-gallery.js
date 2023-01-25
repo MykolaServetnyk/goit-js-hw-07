@@ -32,15 +32,21 @@ function onGalleryRefClick(event) {
     return;
   }
   modalWindow = basicLightbox.create(
-    `<img src='${event.target.dataset.source}' width="800" height="600">`
+    `<img src='${event.target.dataset.source}' width="800" height="600">`,
+    {
+      onShow: modalWindow => {
+        window.addEventListener('keydown', onEscKeyPress);
+      },
+      onClose: modalWindow => {
+        window.removeEventListener('keydown', onEscKeyPress);
+      },
+    }
   );
-  modalWindow.show();
-
-  window.addEventListener("keydown", onEscKeyPress);
 
   function onEscKeyPress(evt) {
     if (evt.code === "Escape" && basicLightbox.visible()) {
       modalWindow.close();
     }
   }
+  modalWindow.show();
 }
