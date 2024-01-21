@@ -1,0 +1,76 @@
+body {
+    font-family: 'Montserrat',
+        sans-serif;
+
+    color: #2E2F42
+}
+
+input {
+    border: solid;
+    border-color: #808080;
+    font-weight: 400;
+    color: #2E2F42;
+    width: 360px;
+    height: 40px;
+
+}
+
+.item {
+    background: #F6F6FE;
+
+}
+
+#name-output {
+    font-weight: 600;
+}
+
+
+.login-form label,
+.login-form input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-form button {
+    color: #FFFFFF;
+    font-weight: 500;
+    width: 148px;
+    padding: 8px 16px;
+    border: transparent;
+}
+
+button {
+    text-align: center;
+    background: #4E75FF;
+    border-radius: 8px;
+
+}
+
+#controls input {
+    padding: 8px 72px;
+    width: auto;
+    margin-bottom: 64px;
+
+}
+
+.change-color,
+#controls button {
+    color: #FFFFFF;
+    font-weight: 500;
+    width: 148px;
+    padding: 8px 16px;
+    border: transparent;
+
+}
+
+button[data-destroy] {
+    background-color: red;
+    color: white;
+}
+
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
